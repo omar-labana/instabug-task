@@ -1,9 +1,19 @@
 <template>
-    <h1>login</h1>
+    <main>
+        <Slider />
+        <LoginForm />
+    </main>
 </template>
 
 <script>
-export default {}
+import Slider from '../components/login/Slider.vue'
+import LoginForm from '../components/login/LoginForm.vue'
+export default {
+    components: {
+        Slider,
+        LoginForm,
+    },
+}
 </script>
 
 <style>
