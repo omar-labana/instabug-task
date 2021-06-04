@@ -9,5 +9,4 @@
 </script>
 
 <style>
-@import './assets/sass/_atomic.scss';
 </style>
