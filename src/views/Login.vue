@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="full-page flex">
         <Slider />
         <LoginForm />
     </main>
