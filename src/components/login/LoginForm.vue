@@ -26,11 +26,14 @@
             method="post"
             class="mt-10 flex flex-col max-w-65 w-full font-size-14"
             id="login-form"
-            @submit="checkForm"
+            @submit.prevent="checkForm"
         >
             <!-- Login Form -->
             <!-- Email -->
-            <label for="email" class="label-text">Work Email</label>
+        <span v-if="loginError" class="input-border bg-red-light mt-5 input-padding"
+            >Your email and/or password are incorrect</span
+        >
+            <label for="email" class="label-text mt-10">Work Email</label>
             <input
                 type="email"
                 name="email"
@@ -116,13 +119,22 @@ export default {
             isValid: false,
             emailError: false,
             passError: false,
+            loginError: false,
             timeout: null,
         }
     },
     methods: {
         checkForm: function (e) {
-            console.log(users)
-            e.preventDefault()
+            let pivot = users.find(({ email, password }) => {
+                return email === this.email && password === this.password
+            })
+            if (pivot) {
+                localStorage.setItem('user', JSON.stringify(pivot))
+                this.loginError = false
+            } else {
+                this.loginError = true
+            }
+            console.log(this.loginError)
         },
         validateEmail: function (e) {
             const emailInput = document.getElementById('email')
@@ -154,13 +166,13 @@ export default {
         },
         alpha: function (e) {
             clearTimeout(this.timeout)
-            this.timeout = setTimeout(()=>{
+            this.timeout = setTimeout(() => {
                 this.validateEmail(e)
             }, 1000)
         },
         beta: function (e) {
             clearTimeout(this.timeout)
-            this.timeout = setTimeout(()=>{
+            this.timeout = setTimeout(() => {
                 this.validatePass(e)
             }, 1000)
         },
