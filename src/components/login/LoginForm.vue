@@ -30,9 +30,11 @@
         >
             <!-- Login Form -->
             <!-- Email -->
-        <span v-if="loginError" class="input-border bg-red-light mt-5 input-padding"
-            >Your email and/or password are incorrect</span
-        >
+            <span
+                v-if="loginError"
+                class="input-border bg-red-light mt-5 input-padding"
+                >Your email and/or password are incorrect</span
+            >
             <label for="email" class="label-text mt-10">Work Email</label>
             <input
                 type="email"
@@ -130,11 +132,11 @@ export default {
             })
             if (pivot) {
                 localStorage.setItem('user', JSON.stringify(pivot))
+                this.$router.push('/welcome')
                 this.loginError = false
             } else {
                 this.loginError = true
             }
-            console.log(this.loginError)
         },
         validateEmail: function (e) {
             const emailInput = document.getElementById('email')
