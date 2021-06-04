@@ -5,7 +5,7 @@ import Error from '/src/views/Error.vue'
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'Login',
     component: Login,
   },
