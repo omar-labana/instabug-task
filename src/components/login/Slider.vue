@@ -6,7 +6,7 @@
                 alt=""
                 class="max-w-65"
             />
-            <h2 class="text-white mt-15">
+            <h2 class="text-white mt-15 text-center">
                 Accelerate Your Entire Mobile Team Workflow
             </h2>
         </div>
@@ -16,7 +16,7 @@
                 alt=""
                 class="max-w-65"
             />
-            <h2 class="text-white mt-15">
+            <h2 class="text-white mt-15 text-center">
                 The Most Comprehenive Bug Reporting Tool for Mobile Apps
             </h2>
         </div>
@@ -26,7 +26,7 @@
                 alt=""
                 class="max-w-65"
             />
-            <h2 class="text-white mt-30">
+            <h2 class="text-white mt-15 text-center">
                 Secure Crash Reporting With Real-Time Alerts
             </h2>
         </div>
