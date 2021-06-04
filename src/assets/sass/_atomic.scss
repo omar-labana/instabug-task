@@ -139,6 +139,10 @@ body {
     color: #0089e5;
 }
 
+.text-red {
+    color: red;
+}
+
 .text-blue-dark {
     color: #00267f;
 }
@@ -155,6 +159,12 @@ body {
     border: 1px solid #dcdee3;
     border-radius: 4px;
 }
+
+.border-red {
+    border-radius: 4px;
+    border-color: red;
+}
+
 // High order classes
 
 .full-page {
