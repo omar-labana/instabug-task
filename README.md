@@ -49,12 +49,12 @@
   <img alt="Dark" src="./docs/404.png" width="45%">
 </p>
 
-Three views simulating basic user experince.
+Three views simulating basic user experience.
 
 Here's what you can find:
 
 - Login page with validation(only for email and password).
-- Welcome page displayed when a user is succefuly logged in.
+- Welcome page is displayed when a user is successfully logged in.
 - 404 error page when the user tries to access an invalid URL.
 
 ### Built With
